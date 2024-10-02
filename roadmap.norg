@@ -1,0 +1,29 @@
+* Ideas
+  - add support for error checking (keep writing down ideas as I go)
+  -- errors:
+  --- If the Json file doesn't exist
+  --- If one of the values is null (warning)
+  --- If there is a typo in the JSON
+  --- When there's an error in one of the hooks (maybe)
+  -- What to do when it hits such errors: 
+  --- BRICK THE DEVICE (/jk)
+  --- stop watching the file until the user attempts to watch it again, user will have to manually enable watching or
+      restart neovim (if they set it in their config)
+  --- if the error interferes with program functionality, don't execute it
+  - add support for hooks
+  -- Improve error functionality
+  -- add integrations (allow the user to add a hook function that accepts 
+     the JSON data as parameters
+  -- _pre
+  -- _post
+  - Use libuv instead of io.open
+  - be able to set wanted theme based using the lua config
+  -- default in the json file would be "manual"
+  -- Then what'll happen is that set_theme can accept an argument which is
+     a string that indicates the theme to use
+  -- Say I wanna use 
+  -- Use lock files to communicate to other programs the theme to use
+  --- i.e. current_theme.json.lock
+  -- The theme-manager would watch if the config changes to allow the user
+     to manually change to their default and ignore the lua hook
+  - Document code
